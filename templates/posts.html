@@ -24,7 +24,7 @@ Posts
 
             {% for post in posts %}
             <tr>
-                <td>{{ post.post_name | nofoobar }}</td>
+                <td><a class="nav-link" href="{% url 'post_detail' post.id %}">{{ post.post_name | nofoobar }}</a></td>
                 <td>{{ post.post_datetime | date:'d M Y' }}</td>
                 <td>
 <!--                    {{ post.post_category.name }}-->
