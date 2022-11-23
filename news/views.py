@@ -108,6 +108,7 @@ def subscribe(request,pk):
 
 
 def send_notifications(preview, pk, title, subscribers):
+    """Sending notification to all subscribers"""
     html_content = render_to_string(
         'post_created_email.html',
         {
@@ -127,6 +128,7 @@ def send_notifications(preview, pk, title, subscribers):
     msg.send()
 
 def mailing_to_subs():
+    """Sending weekly list of news"""
     today = datetime.datetime.now()
     last_week = today - datetime.timedelta(days=7)
     posts = Post.objects.filter(post_datetime__gte=last_week)
