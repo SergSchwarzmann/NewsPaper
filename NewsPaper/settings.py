@@ -27,11 +27,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
-
+ADMINS = os.getenv('ADMINS')
 
 # Application definition
 
@@ -258,27 +258,33 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['all_messages', 'warnings', 'err_crit', 'general_file'],
+            'level': 'INFO',
             'propagate': True,
         },
         'django.request': {
             'handlers': ['error_file', 'mail'],
-            'propagate': False,
+            'level': 'ERROR',
+            'propagate': True,
         },
         'django.server': {
             'handlers': ['error_file', 'mail'],
+            'level': 'ERROR',
             'propagate': False,
         },
         'django.template': {
             'handlers': ['error_file'],
-            'propagate': False,
+            'level': 'ERROR',
+            'propagate': True,
         },
-        'django.db_backends': {
+        'django.db.backends': {
             'handlers': ['error_file'],
-            'propagate': False,
+            'level': 'ERROR',
+            'propagate': True,
         },
         'django.security': {
             'handlers': ['security_file'],
-            'propagate': False,
+            'level': 'INFO',
+            'propagate': True,
         },
     },
 }
