@@ -281,7 +281,7 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
-        'django.security': {
+        'django.security.*': {
             'handlers': ['security_file'],
             'level': 'INFO',
             'propagate': True,
