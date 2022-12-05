@@ -1,1 +1,4 @@
 2022-11-23 08:52:45,665 INFO autoreload Watching for file changes with StatReloader
+2022-11-28 15:06:17,492 INFO autoreload Watching for file changes with StatReloader
+2022-11-28 15:06:36,592 INFO autoreload Watching for file changes with StatReloader
+2022-11-28 15:07:14,023 INFO autoreload D:\Python\DjangoProjects\NewsPaper\NewsPaper\settings.py changed, reloading.

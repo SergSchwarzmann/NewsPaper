@@ -1,13 +1,16 @@
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
 {% load custom_filters %}
 {% load custom_tags %}
 
+
 {% block title %}
-Posts
+{% translate 'All posts' %}
 {% endblock title %}
 
 {% block content %}
+
     <h1 class="text-center">All posts</h1>
 <!--    <h3>Number of posts: {{ posts | length }}</h3>-->
     <h3>{% current_time %}</h3>
@@ -16,10 +19,10 @@ Posts
     {% if posts %}
         <table style="width:600px; height:150px">
             <tr>
-                <td><b>Name</b></td>
-                <td><b>Date</b></td>
-                <td><b>Category</b></td>
-                <td><b>Text</b></td>
+                <td><b>{% trans 'Name' %}</b></td>
+                <td><b>{% trans 'Date' %}</b></td>
+                <td><b>{% trans 'Category' %}</b></td>
+                <td><b>{% trans 'Text' %}</b></td>
             </tr>
 
             {% for post in posts %}

@@ -1,6 +1,7 @@
 {% extends 'flatpages/default.html' %}
 
 {% load custom_filters %}
+{% load i18n %}
 
 {% block content %}
 <h1>Delete post</h1>
@@ -15,6 +16,6 @@
     <td>Text: {{ post.post_value | nofoobar }}</td>
     </h3>
     <br><br><br><br><br>
-    <input type="submit" value="Delete">
+    <input type="submit" value="{% trans 'Delete' %}">
 </form>
 {% endblock content %}

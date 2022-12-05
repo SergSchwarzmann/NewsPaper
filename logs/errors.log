@@ -126,3 +126,1435 @@ Traceback (most recent call last):
     raise ConnectionError(str(exc)) from exc
 kombu.exceptions.OperationalError: Error 10061 connecting to localhost:6379. Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
 2022-11-23 08:22:43,212 ERROR "POST /posts/create/ HTTP/1.1" 500 316305 D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\servers\basehttp.py None
+2022-12-02 14:04:16,996 ERROR Internal Server Error: /accounts/signup/ D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py (<class 'django.contrib.auth.models.Group.DoesNotExist'>, DoesNotExist('Group matching query does not exist.'), <traceback object at 0x000001C62EACF2C0>)
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 250, in form_valid
+    self.user = form.save(self.request)
+  File "D:\Python\DjangoProjects\NewsPaper\sign\models.py", line 28, in save
+    basic_group = Group.objects.get(name='common')
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Group.DoesNotExist: Group matching query does not exist.
+2022-12-02 14:04:17,080 ERROR Internal Server Error: /accounts/signup/ D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('The ADMINS setting must be a list of 2-tuples.'), <traceback object at 0x000001C629D96EC0>)
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 250, in form_valid
+    self.user = form.save(self.request)
+  File "D:\Python\DjangoProjects\NewsPaper\sign\models.py", line 28, in save
+    basic_group = Group.objects.get(name='common')
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Group.DoesNotExist: Group matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+2022-12-02 14:04:17,148 ERROR Internal Server Error: /accounts/signup/ D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('The ADMINS setting must be a list of 2-tuples.'), <traceback object at 0x000001C62EAB1700>)
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 250, in form_valid
+    self.user = form.save(self.request)
+  File "D:\Python\DjangoProjects\NewsPaper\sign\models.py", line 28, in save
+    basic_group = Group.objects.get(name='common')
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Group.DoesNotExist: Group matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+2022-12-02 14:04:17,234 ERROR Internal Server Error: /accounts/signup/ D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('The ADMINS setting must be a list of 2-tuples.'), <traceback object at 0x000001C62EAE6A00>)
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 250, in form_valid
+    self.user = form.save(self.request)
+  File "D:\Python\DjangoProjects\NewsPaper\sign\models.py", line 28, in save
+    basic_group = Group.objects.get(name='common')
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Group.DoesNotExist: Group matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+2022-12-02 14:04:17,341 ERROR Internal Server Error: /accounts/signup/ D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('The ADMINS setting must be a list of 2-tuples.'), <traceback object at 0x000001C62EAD3940>)
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 250, in form_valid
+    self.user = form.save(self.request)
+  File "D:\Python\DjangoProjects\NewsPaper\sign\models.py", line 28, in save
+    basic_group = Group.objects.get(name='common')
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Group.DoesNotExist: Group matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+2022-12-02 14:04:17,467 ERROR Internal Server Error: /accounts/signup/ D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('The ADMINS setting must be a list of 2-tuples.'), <traceback object at 0x000001C62EC586C0>)
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 250, in form_valid
+    self.user = form.save(self.request)
+  File "D:\Python\DjangoProjects\NewsPaper\sign\models.py", line 28, in save
+    basic_group = Group.objects.get(name='common')
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Group.DoesNotExist: Group matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+2022-12-02 14:04:17,623 ERROR Internal Server Error: /accounts/signup/ D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('The ADMINS setting must be a list of 2-tuples.'), <traceback object at 0x000001C62EC24080>)
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 250, in form_valid
+    self.user = form.save(self.request)
+  File "D:\Python\DjangoProjects\NewsPaper\sign\models.py", line 28, in save
+    basic_group = Group.objects.get(name='common')
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Group.DoesNotExist: Group matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+2022-12-02 14:04:17,807 ERROR Internal Server Error: /accounts/signup/ D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('The ADMINS setting must be a list of 2-tuples.'), <traceback object at 0x000001C62EACBD80>)
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 250, in form_valid
+    self.user = form.save(self.request)
+  File "D:\Python\DjangoProjects\NewsPaper\sign\models.py", line 28, in save
+    basic_group = Group.objects.get(name='common')
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Group.DoesNotExist: Group matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+2022-12-02 14:04:18,012 ERROR Internal Server Error: /accounts/signup/ D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('The ADMINS setting must be a list of 2-tuples.'), <traceback object at 0x000001C62EADCC00>)
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\allauth\account\views.py", line 250, in form_valid
+    self.user = form.save(self.request)
+  File "D:\Python\DjangoProjects\NewsPaper\sign\models.py", line 28, in save
+    basic_group = Group.objects.get(name='common')
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.Group.DoesNotExist: Group matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = response or self.get_response(request)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 57, in inner
+    response = response_for_exception(request, exc)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\handlers\exception.py", line 143, in response_for_exception
+    log_response(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 241, in log_response
+    getattr(logger, level)(
+  File "D:\Python\lib\logging\__init__.py", line 1475, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "D:\Python\lib\logging\__init__.py", line 1589, in _log
+    self.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 1599, in handle
+    self.callHandlers(record)
+  File "D:\Python\lib\logging\__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+  File "D:\Python\lib\logging\__init__.py", line 952, in handle
+    self.emit(record)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 128, in emit
+    self.send_mail(subject, message, fail_silently=True, html_message=html_message)
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\utils\log.py", line 131, in send_mail
+    mail.mail_admins(
+  File "D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\mail\__init__.py", line 124, in mail_admins
+    raise ValueError("The ADMINS setting must be a list of 2-tuples.")
+ValueError: The ADMINS setting must be a list of 2-tuples.
+2022-12-02 14:04:18,113 ERROR "POST /accounts/signup/ HTTP/1.1" 500 59 D:\Python\DjangoProjects\NewsPaper\venv\lib\site-packages\django\core\servers\basehttp.py None

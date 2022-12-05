@@ -1,6 +1,6 @@
 from django.urls import reverse_lazy
-from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.shortcuts import render, get_object_or_404, HttpResponse
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, View
 from .models import Post, Category
 from .filters import PostFilter
 from .forms import PostForm, ProfileForm
@@ -52,6 +52,14 @@ class PostDetail(DetailView):
     model = Post
     template_name = 'post.html'
     context_object_name = 'post'
+
+    # def filter(self, request):
+    #     models = Post.objects.all()
+    #
+    #     context = {
+    #         'models': models,
+    #     }
+    #     return HttpResponse(render(request, 'post.html', context))
 
 
 class PostCreate(PermissionRequiredMixin, CreateView):
@@ -149,3 +157,4 @@ def mailing_to_subs():
     )
     msg.attach_alternative(html_content, 'text/html')
     msg.send()
+
